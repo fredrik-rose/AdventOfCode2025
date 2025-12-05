@@ -67,3 +67,28 @@ print(decreasing_stack)
 >>> 8, 5, 1
 >>> 8, 9
 ```
+
+### Merge Ranges
+
+To merge ranges/intervals the following algorithm can be used:
+
+1. Create events (position, type) for the start end end of each range
+2. Sort the events (make sure the "on" events come before the "off" events for equal positions)
+3. Iterate the events, for "on" events push to a stack, for "off" events pop from the stack
+4. If the stack becomes empty, create a range starting from the popped value, ending at the current position
+
+See day 5.
+
+## Python
+
+### Range
+
+The built in `range` can be useful for handing ranges.
+
+```
+>>> r = range(2,5)
+>>> 3 in r
+True
+>>> len(r)
+3
+```
