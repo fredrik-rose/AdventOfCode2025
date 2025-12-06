@@ -92,3 +92,10 @@ True
 >>> len(r)
 3
 ```
+
+### Transpose
+
+To transpose a matrix represented as a list of lists:
+```
+list(zip(*matrix))
+```
