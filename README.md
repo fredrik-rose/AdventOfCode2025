@@ -79,6 +79,28 @@ To merge ranges/intervals the following algorithm can be used:
 
 See day 5.
 
+### Union-Find
+
+Also known as Disjoint-set data structure, is a data structure that can be used to handle subsets
+(e.g. components of a graph). It starts in a state where all nodes are disconnected and supports
+connecting nodes to subsets in an efficient manner. See day 8 and
+https://en.wikipedia.org/wiki/Disjoint-set_data_structure.
+
+```
+class UnionFind:
+    def __init__(self, nodes):
+        self.uf = {n: n for n in nodes}
+
+    def union(self, x, y):
+        self.uf[self.find(x)] = self.find(y)
+
+    def find(self, x):
+        if x == self.uf[x]:
+            return x
+        self.uf[x] = self.find(self.uf[x])
+        return self.uf[x]
+```
+
 ## Python
 
 ### Range
