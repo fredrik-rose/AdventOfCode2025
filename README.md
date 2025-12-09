@@ -101,6 +101,38 @@ class UnionFind:
         return self.uf[x]
 ```
 
+### Polygons
+
+When dealing with huge areas sometimes coordinate compression can be useful. Let's say we have the
+points
+```
+7,1
+11,1
+11,7
+9,7
+9,5
+2,5
+2,3
+7,3
+```
+then we could compress the x-axis to
+```
+{
+    x<2:    0,
+    2:      1,
+    2<x<7:  2
+    7:      3,
+    7<x<9:  4,
+    9:      5,
+    9<x<11: 6
+    11:     7,
+    11<x:   8,
+}
+```
+
+Another tip is that it might be beneficial to create an outside and/or inside border of a shape, to
+ease inside/outside checks, see day 9.
+
 ## Python
 
 ### Range
