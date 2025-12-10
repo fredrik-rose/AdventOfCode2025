@@ -133,6 +133,11 @@ then we could compress the x-axis to
 Another tip is that it might be beneficial to create an outside and/or inside border of a shape, to
 ease inside/outside checks, see day 9.
 
+### Linear Programming Problems
+
+Z3 is a library that can be used to solve linear programming problems, i.e. linear equations with
+constraints and an optimization target, see day 10.
+
 ## Python
 
 ### Range
