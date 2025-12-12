@@ -13,6 +13,11 @@ pylint adventofcode/
 
 ## Algorithms
 
+### Strategy for Hard Problems
+
+For problems that seem really hard the input data could be nice, try trivial solutions that might
+not work in the general place, it may be enough.
+
 ### Repeated Substring Trick
 
 To check if `string` is a repeated substring (e.g. `ABABAB` or `ABCABC`) one can use this trick:
